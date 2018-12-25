@@ -8,7 +8,8 @@ sed -i 's/"exited_cleanly":false/"exited_cleanly":false/' ~/.config/chromium/'Lo
 sed -i 's/"exited_cleanly":false/"exited_cleanly":true/; s/"exit_type":"[^"]\+"/"exit_type":"Normal"/' ~/.config/chromium/Default/Preferences
 # Run Chromium and open tabs
 link_url=https://bo.nextschool.io/monitor/messaging
+config=
 while true;
-do ping -c1 www.google.com > /dev/null && echo 'online' && /usr/bin/chromium-browser --disable-translate --noerrordialogs --kiosk --disable-session-crashed-bubble $link_url
+do ping -c1 www.google.com > /dev/null && echo 'online' && /usr/bin/chromium-browser --disable-translate --noerrordialogs --kiosk  --disable-session-crashed-bubbl $link_url
 sleep 2s
 done
