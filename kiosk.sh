@@ -9,6 +9,6 @@ sed -i 's/"exited_cleanly":false/"exited_cleanly":true/; s/"exit_type":"[^"]\+"/
 # Run Chromium and open tabs
 link_url=https://bo.nextschool.io/monitor/terminal
 while true;
-do ping -c1 www.google.com > /dev/null && echo 'online' && /usr/bin/chromium-browser --disable-translate --noerrordialogs --kiosk --disable-translate --disable-session-crashed-bubble $link_url
+do ping -c1 www.google.com > /dev/null && echo 'online' && /usr/bin/chromium-browser --disable-translate --noerrordialogs --kiosk --disable-session-crashed-bubble $link_url
 sleep 2s
 done
