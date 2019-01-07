@@ -10,12 +10,13 @@ sed -i 's/"exited_cleanly":false/"exited_cleanly":true/; s/"exit_type":"[^"]\+"/
 link_url=https://bo.nextschool.io/monitor/terminal
 while true;
 do ping -c1 www.google.com > /dev/null && echo 'online' && /usr/bin/chromium-browser \
---kiosk \
+--noerrors \
 --disable-translate \
 --noerrordialogs \
 --disable-glsl-translator \
 --disable-session-crashed-bubble \
 --disable-infobars \
+--kiosk \
 $link_url
 sleep 2s
 done
